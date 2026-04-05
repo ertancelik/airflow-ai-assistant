@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Airflow AI Assistant",
+  "version": "1.0",
+  "description": "AI Assistant for Apache Airflow UI",
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:8080/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
